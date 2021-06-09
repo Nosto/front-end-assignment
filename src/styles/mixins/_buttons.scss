@@ -1,0 +1,20 @@
+@mixin button-styles {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  appearance: none;
+  justify-content: center;
+  border-radius: $border-radius-default;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-family: $font-family-primary;
+  font-size: $font-size-small;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-tiny;
+  text-decoration: none;
+  transition: all $duration-quickly $transition-button;
+  user-select: none;
+  white-space: nowrap;
+  @include disabled;
+}

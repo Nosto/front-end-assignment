@@ -1,0 +1,49 @@
+.root {
+  display: inline-block;
+  position: relative;
+  @include inline-space($space-xx-small);
+}
+.wrapper {
+  display: block;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-index-overlay;
+  background: $color-white;
+  border-radius: $border-radius-default;
+  box-shadow: $box-shadow-modal;
+  border: 1px solid $color-grey-light;
+
+  /deep/ > .heading {
+    margin: -$space-x-small;
+  }
+}
+
+.heading {
+  border-bottom: 1px solid $color-grey-light;
+  padding-bottom: $space-x-small;
+  margin-bottom: $space-x-small;
+  width: 100%;
+}
+
+.fade-in-enter-active {
+  animation: fade-in $duration-quickly;
+}
+
+.fade-in-leave-active {
+  animation: fade-in $duration-quickly reverse;
+  pointer-events: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

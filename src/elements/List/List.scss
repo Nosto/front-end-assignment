@@ -1,0 +1,20 @@
+.plain {
+  list-style: none;
+  padding-left: 0;
+}
+ul.inline {
+  padding-left: 0;
+}
+.inline li {
+  display: inline-block;
+}
+
+ul,
+ol {
+  padding-left: $space-small;
+  @include stack-space($space-x-small);
+}
+
+li {
+  color: $color-grey-darkest;
+}

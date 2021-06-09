@@ -1,0 +1,21 @@
+#
+# OPACITY TOKENS
+# Use these tokens to set opacity.
+#
+
+props:
+  opacity_disabled:
+    value: "0.5"
+  opacity_loading:
+    value: "0.8"
+  opacity_dormant:
+    value: "0.666"
+  opacity_ghost:
+    value: "0.3"
+  opacity_half:
+    value: "0.5"
+  opacity_opaque:
+    value: "0.2"
+global:
+  type: number
+  category: opacity

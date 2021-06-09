@@ -1,0 +1,104 @@
+// WARNING these styles are imported without scoping in compatibility styles
+
+.action-button {
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  $loader-rotate: rotate 1.5s linear infinite;
+  border: 1px solid currentColor;
+  background-color: $color-white;
+  color: $color-blue-dark;
+  margin: 0;
+
+  @include button-styles;
+  @include inset-squish-space($space-x-small + 2px);
+  @include inline-space($space-xx-small);
+  @import "./variations.scss";
+
+  &:not([disabled]) {
+    &:hover {
+      background-color: $color-blue-lightest;
+    }
+  }
+  &:active {
+    box-shadow: inset 0 0 40px rgba($color-black, 0.2);
+    transition: none;
+  }
+  &:focus {
+    outline: 0;
+  }
+
+  &.expand {
+    width: 100%;
+  }
+
+  .svg-icon {
+    opacity: 0.85;
+    &:first-child {
+      margin-right: $space-xx-small;
+    }
+    &:last-child {
+      margin-left: $space-xxx-small;
+    }
+    &:first-child:last-child {
+      margin: 0;
+    }
+  }
+
+  &[size="small"] {
+    font-family: $font-family-primary-screen-smart;
+    font-size: $font-size-x-small;
+    line-height: $line-height-tiny;
+    letter-spacing: 0.25px;
+    min-width: $space-medium;
+    @include inset-squish-space($space-x-small - 1px);
+    @include inline-space($space-xx-small);
+    .svg-icon {
+      svg {
+        height: $font-size-x-small;
+        width: $font-size-x-small;
+      }
+    }
+  }
+
+  &[animated] {
+    /deep/ svg {
+      animation: $loader-rotate;
+    }
+  }
+
+  .iconRight {
+    flex-direction: row-reverse;
+    /deep/ .svg-icon {
+      &:first-child {
+        margin-right: 0;
+      }
+      svg {
+        margin-left: $space-xx-small;
+      }
+    }
+  }
+
+  .count {
+    background: $color-blue-dark;
+    padding: 1px 5px;
+    border-radius: $border-radius-large;
+    color: $color-white;
+  }
+
+  .active {
+    background-color: $color-blue-lightest;
+  }
+
+  &[disabled] {
+    &:active {
+      box-shadow: none;
+    }
+  }
+}

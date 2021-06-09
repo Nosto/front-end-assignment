@@ -1,0 +1,15 @@
+#
+# TRANSITION PROPERTY TOKENS
+# Use these tokens for animation property tokens.
+#
+
+props:
+  transition_movement_short_slide:
+    value: "8px"
+  transition_progress_steep:
+    value: "cubic-bezier(0.55, 0, 0.1, 1)"
+  transition_button:
+    value: "cubic-bezier(1, 0.5, 0.8, 1)"
+global:
+  type: number
+  category: transition

@@ -1,0 +1,199 @@
+.container {
+  position: relative;
+}
+
+.bars {
+  rect {
+    transition: y 0.2s, height 0.2s, opacity 0.2s;
+    &.horizontal {
+      transition: x 0.2s, width 0.2s, opacity 0.2s;
+    }
+    &.opaque {
+      opacity: $opacity-opaque;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.lines {
+  path {
+    transition: d 0.2s, opacity 0.2s, color 0.1s ease-in;
+    fill: none;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    &.opaque {
+      fill-opacity: $opacity-opaque;
+      stroke-opacity: $opacity-opaque;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.dots {
+  circle {
+    transition: cx 0.2s, cy 0.2s, opacity 0.2s ease-in;
+    &.active {
+      stroke-opacity: 0.5;
+      stroke-width: 5;
+    }
+    &.opaque {
+      opacity: $opacity-opaque;
+    }
+  }
+}
+
+.donut {
+  .arc {
+    transition: opacity $duration-quickly ease-in;
+    .outer {
+      opacity: 0;
+      transition: opacity $duration-quickly ease-in;
+    }
+    path {
+      fill: currentColor;
+      stroke: none;
+      transition: d 0.2s;
+    }
+    &:hover {
+      .outer {
+        opacity: 0.5;
+      }
+    }
+    &.dim {
+      opacity: $opacity-opaque;
+    }
+  }
+}
+
+
+
+path,
+line {
+  stroke: currentColor;
+}
+circle,
+rect {
+  fill: currentColor;
+  &.active {
+    stroke: currentColor;
+  }
+}
+
+.rendering {
+  rect {
+    fill: $color-grey-lighter;
+  }
+  text {
+    fill: $color-ink;
+    font-size: $font-size-small;
+  }
+}
+
+.loading-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+  .lines {
+    path {
+      animation: opacityPump $duration-blink linear alternate infinite;
+    }
+  }
+  .dots {
+    circle {
+      animation: opacityPump $duration-blink linear alternate infinite;
+    }
+  }
+
+  /deep/ .legend {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    flex-wrap: wrap;
+    flex: 1 1 55px;
+    justify-content: center;
+    .legend-item {
+      .content {
+        @include skeletonBoxSmall;
+        width: 64px;
+        display: inline-block;
+        min-height: 0;
+        height: 14px;
+        color: transparent;
+        .rect {
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@mixin color($palette) {
+  @for $i from 1 through length($palette) {
+    $color: nth($palette, $i);
+    /deep/ .color#{$i - 1} {
+      color: $color;
+    }
+  }
+}
+
+.palette-grey-scale {
+  @include color($palette-grey-scale);
+}
+
+.palette-10 {
+  @include color($palette-10);
+}
+
+.palette-7 {
+  @include color($palette-7);
+}
+
+.palette-6-up {
+  @include color($palette-6-up);
+}
+
+.palette-6-down {
+  @include color($palette-6-down);
+}
+
+.palette-5-down {
+  @include color($palette-5-down);
+}
+
+.palette-3-up {
+  @include color($palette-3-up);
+}
+
+.palette-3-down {
+  @include color($palette-3-down);
+}
+
+.palette-2-down {
+  @include color($palette-2-down);
+}
+
+.palette-2-up {
+  @include color($palette-2-up);
+}
+
+.palette-donut {
+  @include color($palette-donut);
+}
+
+@keyframes opacityPump {
+  from {
+    opacity: 0.9;
+    stroke-width: 2px;
+  }
+  to {
+    opacity: 0.05;
+    stroke-width: 3px;
+  }
+}

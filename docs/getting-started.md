@@ -1,0 +1,3 @@
+### This is Nosto’s Design System documentation which is built on top of Vue Design System. The documentation provides you and your team a set of organized tools, patterns & practices that work as the foundation for your application development.
+
+You’re looking at [Nosto Design System’s](https://vueds.com/) documentation and component library. It serves as a resource that helps to define a common visual language for our applications. Everything you see here is editable in Markdown format. 

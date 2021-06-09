@@ -1,0 +1,66 @@
+@mixin mq-short-viewport {
+  @media #{$media-query-height-small} {
+    @content;
+  }
+
+  @media #{$media-query-small-and-medium} and #{$media-query-height-small} {
+    @content;
+  }
+
+  @media #{$media-query-large} and #{$media-query-height-small} {
+    @content;
+  }
+}
+
+@mixin mq-full-viewport {
+  @media #{$media-query-large} and #{$media-query-height-medium-up} {
+    @content;
+  }
+}
+
+@mixin short-nav-styling {
+  width: $width-nav-collapsed - 1;
+  padding: 0;
+
+  section {
+    width: $width-nav-collapsed;
+    float: left;
+    clear: both;
+  }
+}
+
+@mixin page-header-width-subnav {
+  @include mq-short-viewport {
+    width: calc(100% - #{$width-nav-short-viewport});
+  }
+  @include mq-full-viewport {
+    width: calc(100% - #{$width-nav-sub});
+  }
+  @media #{$media-query-small-and-medium} {
+    width: calc(100% - #{$width-nav-collapsed-sub});
+  }
+}
+
+@mixin page-header-width {
+  @include mq-short-viewport {
+    width: calc(100% - #{$width-nav-collapsed});
+  }
+  @include mq-full-viewport {
+    width: calc(100% - #{$width-nav});
+  }
+  @media #{$media-query-small-and-medium} {
+    width: calc(100% - #{$width-nav-collapsed});
+  }
+}
+
+@mixin breadcrumbsTitle {
+  margin: 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all $duration-quickly ease-in;
+
+  &.hideTitle {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}

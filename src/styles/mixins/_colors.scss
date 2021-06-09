@@ -1,0 +1,95 @@
+@mixin palette-10-up {
+  @for $i from 1 through length($palette-10) {
+    &:nth-child(#{length($palette-10)}n + #{$i}) {
+      color: nth($palette-10, $i);
+    }
+  }
+}
+
+@mixin palette-10-down {
+  @for $i from length($palette-10) through 1 {
+    &:nth-child(#{length($palette-10)}n - #{$i}) {
+      color: nth($palette-10, $i);
+    }
+  }
+}
+
+@mixin palette-7 {
+  @for $i from length($palette-7) through 1 {
+    &:nth-child(#{length($palette-7)}n - #{$i}) {
+      color: nth($palette-7, $i);
+    }
+  }
+}
+
+@mixin palette-6-up {
+  @for $i from 1 through length($palette-6-up) {
+    &:nth-child(#{length($palette-6-up)}n + #{$i}) {
+      color: nth($palette-6-up, $i);
+    }
+  }
+}
+
+@mixin palette-5-up {
+  @for $i from 1 through length($palette-5-up) {
+    &:nth-child(#{length($palette-5-up)}n + #{$i}) {
+      color: nth($palette-5-up, $i);
+    }
+  }
+}
+@mixin palette-5-down {
+  @for $i from 1 through length($palette-5-down) {
+    &:nth-child(#{length($palette-5-down)}n + #{$i}) {
+      color: nth($palette-5-down, $i);
+    }
+  }
+}
+
+@mixin palette-3-up {
+  @for $i from 1 through length($palette-3-up) {
+    &:nth-child(#{length($palette-3-up)}n + #{$i}) {
+      color: nth($palette-3-up, $i);
+    }
+  }
+}
+@mixin palette-3-down {
+  @for $i from 1 through length($palette-3-down) {
+    &:nth-child(#{length($palette-3-down)}n + #{$i}) {
+      color: nth($palette-3-down, $i);
+    }
+  }
+}
+
+@mixin palette-2-up {
+  @for $i from 1 through length($palette-2-up) {
+    &:nth-child(#{length($palette-2-up)}n + #{$i}) {
+      color: nth($palette-2-up, $i);
+    }
+  }
+}
+@mixin palette-2-down {
+  @for $i from 1 through length($palette-2-down) {
+    &:nth-child(#{length($palette-2-down)}n + #{$i}) {
+      color: nth($palette-2-down, $i);
+    }
+  }
+}
+
+@mixin palette-1 {
+  &:first-child {
+    color: $color-blue-light;
+  }
+}
+
+// Colors for data series and points.
+$colors: $palette-5-down !default;
+
+@mixin legends($colors) {
+  @for $i from 1 through length($colors) {
+    $color: nth($colors, $i);
+    .legend-#{$i - 1} /deep/ svg path {
+      fill: $color;
+      stroke: $color;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+/**
+ * These styles are global for a reason.
+ *
+ * They create the basis for typography and
+ * block level elements to make it easier to
+ * create layouts.
+ */
+.nosto-layout {
+  font-family: $font-family-primary;
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+  font-style: normal;
+  line-height: $line-height-base;
+
+  > .container {
+    &:not(:first-child) {
+      padding-top: 0;
+    }
+    &[mode="form"] {
+      min-width: $wizard-panel-min-width;
+      max-width: $wizard-panel-max-width;
+      padding-bottom: $height-input + ($space-x-small * 3) !important;
+    }
+    &[mode="getStarted"] {
+      min-width: $get-started-min-width;
+      max-width: $get-started-max-width;
+    }
+  }
+  .plain {
+    list-style: none;
+    padding-left: 0;
+  }
+  .layout-top {
+    @include stack-space($space-x-small);
+    .layout-top-right {
+      flex-shrink: 0;
+    }
+  }
+  h1,
+  h2 {
+    @include stack-space($space-xx-small);
+  }
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  ul,
+  ol,
+  table,
+  img,
+  video,
+  canvas,
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    @include stack-space($space-x-small);
+  }
+  ul,
+  ol {
+    padding-left: $space-small;
+  }
+  p a {
+    font-family: $font-family-primary;
+    color: $color-blue-dark;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  blockquote {
+    font-style: italic;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    font-family: $font-family-secondary;
+  }
+}

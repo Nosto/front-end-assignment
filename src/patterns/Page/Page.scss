@@ -1,0 +1,88 @@
+.page {
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: $color-grey-lightest;
+
+  &[sub-nav] {
+    @include page-header-width-subnav;
+
+    @include mq-short-viewport {
+      left: $width-nav-short-viewport;
+    }
+    @include mq-full-viewport {
+      left: $width-nav-sub;
+    }
+    @media #{$media-query-small-and-medium} {
+      left: $width-nav-collapsed-sub;
+    }
+  }
+
+  @include page-header-width;
+
+  @include mq-short-viewport {
+    left: $width-nav-collapsed;
+  }
+
+  @include mq-full-viewport {
+    left: $width-nav;
+  }
+
+  @media #{$media-query-small-and-medium} {
+    left: $width-nav-collapsed;
+  }
+
+  /deep/ .top-bar-fixed.custom-header + .content,
+  /deep/ .top-bar-fixed + .content {
+    padding-top: #{$space-x-large - $space-xxx-small};
+  }
+
+  /deep/ .top-bar-fixed.crumbs-available + .content {
+    padding-top: #{$space-x-large + $space-xx-small + $space-xxx-small / 2};
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  &.notification-active {
+    .top-bar-fixed,
+    /deep/ .nav,
+    /deep/ .sub-nav {
+      margin-top: $height-notification-bar;
+    }
+    /deep/ .nav,
+    /deep/ .sub-nav {
+      height: calc(100% - #{$height-notification-bar});
+    }
+    /deep/ .full-size {
+      .vue-codemirror-wrap {
+        height: calc(100% - #{$height-cm-topbar + $height-notification-bar});
+      }
+      .CodeMirror {
+        height: calc(100vh - 182px);
+        top: $height-notification-bar;
+      }
+    }
+    /deep/ .cm-topbar {
+      top: $height-notification-bar;
+    }
+    // Wizard
+    /deep/ .w-column {
+      height: calc(100vh - #{$height-notification-bar});
+    }
+    /deep/ .wizard,
+    /deep/ .w-sidebar-wrapper {
+      top: 35px;
+    }
+  }
+}
+
+.content:not(.top-bar-hidden) /deep/ .nosto-layout > .callout.fixed-top {
+  top: $height-topbar + 4px;
+}

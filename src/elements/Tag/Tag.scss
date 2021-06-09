@@ -1,0 +1,41 @@
+.tag {
+  @include tagStyles;
+  .left-icon {
+    margin-right: $space-xx-small;
+    cursor: pointer;
+    opacity: 0.75;
+  }
+  .right-icon {
+    margin-left: $space-xx-small;
+    cursor: pointer;
+    opacity: 0.75;
+  }
+  &[editable],
+  .input-tags & {
+    // To match with input-select component’s tag behaviour
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  &[editable] {
+    padding-right: $space-small;
+  }
+  &[editable] .right-icon {
+    position: absolute;
+    right: 4px;
+    padding: $space-xxx-small;
+  }
+  td & {
+    margin: 0;
+  }
+  &[circle] {
+    border-radius: 50%;
+    padding: $space-xxx-small;
+    /deep/ .svg-icon {
+      display: flex;
+    }
+  }
+  &[slim] {
+    line-height: $line-height-tiny;
+    padding: $space-xxx-small / 2 $space-xxx-small;
+  }
+}

@@ -1,0 +1,51 @@
+a {
+  font-family: $font-family-primary;
+  color: $color-blue-dark;
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+  font-size: inherit;
+  cursor: pointer;
+
+  &[subtle] {
+    color: $color-grey-darker;
+  }
+
+  /deep/ .svg-icon {
+    font-size: inherit;
+    margin-right: $space-xxx-small;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: $opacity-disabled;
+  }
+
+  &[size="small"] {
+    font-size: $font-size-x-small;
+
+    /deep/ .svg-icon {
+      font-size: $font-size-xx-small;
+    }
+  }
+
+  &[size="medium"] {
+    font-size: $font-size-medium;
+
+    /deep/ .svg-icon {
+      font-size: $font-size-small;
+    }
+  }
+
+  &[size="large"] {
+    font-size: $font-size-large;
+
+    /deep/ .svg-icon {
+      font-size: $font-size-x-medium;
+    }
+  }
+}

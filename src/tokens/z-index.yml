@@ -1,0 +1,57 @@
+#
+# Z-INDEX TOKENS
+# Use these tokens to set z-index.
+#
+
+props:
+  z_index_flyout_nav:
+    value: "3"
+  z_index_slider:
+    value: "4"
+  z_index_hover:
+    value: "10"
+  z_index_sticky:
+    value: "100"
+  z_index_sticky_column:
+    value: "102"
+  z_index_sticky_header:
+    value: "103"
+  z_index_sticky_column_header:
+    value: "105"
+  z_index_overlay:
+    value: "200"
+  z_index_table_overlay:
+    value: "1009"
+  z_index_header:
+    value: "1010"
+  z_index_footer:
+    value: "1010"
+  z_index_notification:
+    value: "1011"
+  z_index_subnav:
+    value: "1012"
+  z_index_calendar:
+    value: "1050"
+  z_index_sticky_callout:
+    value: "9997"
+  z_index_nav:
+    value: "9998"
+  z_index_popover:
+    value: "9999"
+  z_index_nav_tooltip:
+    value: "9999"
+  z_index_modal:
+    value: "9999"
+  z_index_notification_bar:
+    value: "9999"
+  z_index_codemirror:
+    value: "10000"
+  z_index_tooltip:
+    value: "10000"
+  z_index_topline:
+    value: "10000"
+  z_index_loading:
+    value: "10001"
+global:
+  type: number
+  category: z-index

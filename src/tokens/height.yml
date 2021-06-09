@@ -1,0 +1,41 @@
+#
+# HEIGHT TOKENS
+# Use these tokens to set height for elements.
+#
+
+props:
+  height_short:
+    value: "640px"
+  height_configure_columns:
+    value: "550px"
+  height_breakpoint:
+    value: "768px"
+  height_calendar:
+    value: "280px"
+  height_topbar:
+    value: "64px"
+  height_footer:
+    value: "64px"
+  height_input:
+    value: "38px"
+  height_input_small:
+    value: "32px"
+  height_panel_header:
+    value: "48px"
+  height_table_group_header:
+    value: "32px"
+  height_table_cell:
+    value: "52px"
+  height_cm_topbar:
+    value: "82px"
+  height_nav_groups_normal:
+    value: "163px"
+  height_nav_groups_short:
+    value: "128px"
+  height_rule_modal_fixed:
+    value: "500px"
+  height_notification_bar:
+    value: "32px"
+global:
+  type: number
+  category: height

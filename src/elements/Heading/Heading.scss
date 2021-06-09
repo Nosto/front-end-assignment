@@ -1,0 +1,103 @@
+// WARNING these styles are imported without scoping in compatibility styles
+
+.heading {
+  text-transform: capitalize;
+  font-family: $font-family-primary;
+  line-height: $line-height-heading;
+  color: $color-ink;
+  &.magenta {
+    color: $color-magenta;
+  }
+  &.subTitle {
+    align-items: center;
+    color: $color-grey;
+    margin-bottom: $space-x-small;
+    padding: $space-x-small 0;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    &:before,
+    &:after {
+      border-bottom: 1px solid $color-grey-light;
+      content: "";
+      position: absolute;
+      width: calc(50% - 16px);
+      top: 50%;
+      overflow: hidden;
+    }
+    &:before {
+      margin-left: -50%;
+      text-align: right;
+    }
+    &:after {
+      margin-left: $space-x-small;
+    }
+  }
+}
+h1 {
+  line-height: $line-height-small;
+  font-size: $font-size-xx-large;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  @include stack-space($space-xx-small);
+
+  &.hero {
+    line-height: $line-height-table-multirow;
+    font-family: $font-family-secondary;
+    color: $color-magenta;
+    font-size: $font-size-xxxx-large;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    @include stack-space($space-medium);
+  }
+
+  &.marketing {
+    letter-spacing: $letter-spacing-tiny;
+    font-size: $font-size-xxxx-large;
+    @include stack-space($space-x-small);
+  }
+}
+h2 {
+  line-height: $line-height-small;
+  font-size: $font-size-x-large;
+  font-weight: $font-weight-medium;
+  @include stack-space($space-xx-small);
+
+  &.marketing {
+    letter-spacing: $letter-spacing-small;
+    font-size: $font-size-xxx-large;
+    @include stack-space($space-x-small);
+  }
+}
+h3 {
+  font-family: $font-family-primary;
+  color: $color-ink;
+  line-height: $line-height-small;
+  font-size: $font-size-x-medium;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  @include stack-space($space-xx-small);
+
+  &.marketing {
+    line-height: $line-height-heading-tiny;
+    letter-spacing: $letter-spacing-small;
+    font-size: $font-size-xx-large;
+    @include stack-space($space-small);
+  }
+}
+h4 {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-medium;
+  @include stack-space($space-xx-small);
+}
+h5 {
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
+  @include stack-space($space-xx-small);
+}
+h6 {
+  font-size: $font-size-x-small;
+  font-weight: $font-weight-medium;
+  @include stack-space($space-xx-small);
+}

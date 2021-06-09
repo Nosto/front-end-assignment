@@ -1,0 +1,71 @@
+.kpi-wrapper {
+  justify-content: center;
+  display: inline-flex;
+  flex-flow: column;
+  height: 51px;
+  padding-right: $space-medium;
+
+  /deep/ .tag {
+    line-height: $line-height-tiny;
+  }
+}
+.title {
+  color: $color-grey-darker;
+  font-family: $font-family-primary-screen-smart;
+  font-size: $font-size-x-small;
+
+  &.tag {
+    margin-bottom: $space-xxx-small;
+  }
+}
+
+.value {
+  color: $color-ink;
+  font-family: $font-family-primary;
+  font-size: $font-size-x-large;
+  font-weight: $font-weight-medium;
+
+  &[variation*="regular"] {
+    color: $color-ink;
+  }
+  &[variation*="danger"] {
+    color: $color-red-light;
+  }
+  &[variation*="warning"] {
+    color: $color-yellow-darker;
+  }
+  &[variation*="secondary"] {
+    color: $color-grey-dark;
+  }
+  &[variation*="success"] {
+    color: $color-green;
+  }
+  &[small] {
+    font-size: $font-size-small;
+  }
+  &[clickable] {
+    color: $color-blue-dark;
+    transition: color $duration-snappy linear;
+    &:hover {
+      color: $color-blue-darker;
+      cursor: pointer;
+    }
+  }
+}
+
+[loading] {
+  .title,
+  .value {
+    &.hide {
+      font-size: 0;
+      margin-right: 0;
+    }
+  }
+  .title {
+    @include skeletonBoxSmall;
+    margin-bottom: $space-xxx-small;
+  }
+  .value {
+    @include skeletonBoxMedium;
+  }
+}

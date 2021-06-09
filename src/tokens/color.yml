@@ -1,0 +1,248 @@
+#
+# COLOR TOKENS
+# Use these tokens to set a color.
+#
+
+props:
+  color_white:
+    value: "#FFFFFF"
+    category: "color_group_0"
+  color_black:
+    value: "#000000"
+    category: "color_group_0"
+
+  color_grey_lightest:
+    value: "#F9FAFA"
+    category: "color_group_0"
+  color_grey_lighter:
+    value: "#F0F3F6"
+    category: "color_group_0"
+  color_grey_light:
+    value: "#DEE3EB"
+    category: "color_group_0"
+  color_grey:
+    value: "#C5D2DF"
+    category: "color_group_0"
+  color_grey_dark:
+    value: "#96A9BD"
+    category: "color_group_0"
+  color_grey_darker:
+    value: "#516980"
+    category: "color_group_0"
+  color_grey_darkest:
+    value: "#1C3349"
+    category: "color_group_0"
+  color_ink:
+    value: "#131E28"
+    category: "color_group_0"
+
+  color_magenta_lightest:
+    value: "#FAD0EB"
+    category: "color_group_1"
+  color_magenta_lighter:
+    value: "#F38CCC"
+    category: "color_group_1"
+  color_magenta_light:
+    value: "#D64CA5"
+    category: "color_group_1"
+  color_magenta:
+    value: "#CE0686"
+    category: "color_group_1"
+  color_magenta_dark:
+    value: "#B20077"
+    category: "color_group_1"
+  color_magenta_darker:
+    value: "#84005B"
+    category: "color_group_1"
+  color_magenta_darkest:
+    value: "#490935"
+    category: "color_group_1"
+
+  color_violet_lightest:
+    value: "#DDDDFF"
+    category: "color_group_2"
+  color_violet_lighter:
+    value: "#AAAEFF"
+    category: "color_group_2"
+  color_violet_light:
+    value: "#8483F8"
+    category: "color_group_2"
+  color_violet:
+    value: "#7C65EE"
+    category: "color_group_2"
+  color_violet_dark:
+    value: "#6142D2"
+    category: "color_group_2"
+  color_violet_darker:
+    value: "#44339F"
+    category: "color_group_2"
+  color_violet_darkest:
+    value: "#22234A"
+    category: "color_group_2"
+
+  color_blue_tint:
+    value: "#F4FAFF"
+    category: "color_group_3"
+  color_blue_lightest:
+    value: "#D9F0FF"
+    category: "color_group_3"
+  color_blue_lighter:
+    value: "#ACD8FE"
+    category: "color_group_3"
+  color_blue_light:
+    value: "#6FB5FF"
+    category: "color_group_3"
+  color_blue:
+    value: "#4495F9"
+    category: "color_group_3"
+  color_blue_dark:
+    value: "#2473D6"
+    category: "color_group_3"
+  color_blue_darker:
+    value: "#16539E"
+    category: "color_group_3"
+  color_blue_darkest:
+    value: "#062956"
+    category: "color_group_3"
+
+  color_teal_lightest:
+    value: "#BDFCEA"
+    category: "color_group_4"
+  color_teal_lighter:
+    value: "#8DF5DF"
+    category: "color_group_4"
+  color_teal_light:
+    value: "#63E5CF"
+    category: "color_group_4"
+  color_teal:
+    value: "#0CC7B6"
+    category: "color_group_4"
+  color_teal_dark:
+    value: "#0AA49F"
+    category: "color_group_4"
+  color_teal_darker:
+    value: "#077377"
+    category: "color_group_4"
+  color_teal_darkest:
+    value: "#06414C"
+    category: "color_group_4"
+
+  color_green_lightest:
+    value: "#C7F8C6"
+    category: "color_group_5"
+  color_green_lighter:
+    value: "#8BED90"
+    category: "color_group_5"
+  color_green_light:
+    value: "#46D364"
+    category: "color_group_5"
+  color_green:
+    value: "#16BA4D"
+    category: "color_group_5"
+  color_green_dark:
+    value: "#098935"
+    category: "color_group_5"
+  color_green_darker:
+    value: "#096F2F"
+    category: "color_group_5"
+  color_green_darkest:
+    value: "#044419"
+    category: "color_group_5"
+
+  color_red_lightest:
+    value: "#FFE5DD"
+    category: "color_group_6"
+  color_red_lighter:
+    value: "#FFB5A4"
+    category: "color_group_6"
+  color_red_light:
+    value: "#F68370"
+    category: "color_group_6"
+  color_red:
+    value: "#E94C3D"
+    category: "color_group_6"
+  color_red_dark:
+    value: "#CD3C2E"
+    category: "color_group_6"
+  color_red_darker:
+    value: "#981C10"
+    category: "color_group_6"
+  color_red_darkest:
+    value: "#610B03"
+    category: "color_group_6"
+
+  color_orange_lightest:
+    value: "#FFECCB"
+    category: "color_group_7"
+  color_orange_lighter:
+    value: "#FFD79B"
+    category: "color_group_7"
+  color_orange_light:
+    value: "#FFBF5F"
+    category: "color_group_7"
+  color_orange:
+    value: "#FB9C2A"
+    category: "color_group_7"
+  color_orange_dark:
+    value: "#D9761B"
+    category: "color_group_7"
+  color_orange_darker:
+    value: "#AF5400"
+    category: "color_group_7"
+  color_orange_darkest:
+    value: "#6D2100"
+    category: "color_group_7"
+
+  color_yellow_tint:
+    value: "#FFFCE8"
+    category: "color_group_8"
+  color_yellow_lightest:
+    value: "#FFF7C9"
+    category: "color_group_8"
+  color_yellow_lighter:
+    value: "#FFF49B"
+    category: "color_group_8"
+  color_yellow_light:
+    value: "#FDE96E"
+    category: "color_group_8"
+  color_yellow:
+    value: "#F8D813"
+    category: "color_group_8"
+  color_yellow_dark:
+    value: "#DBA510"
+    category: "color_group_8"
+  color_yellow_darker:
+    value: "#BF8002"
+    category: "color_group_8"
+  color_yellow_darkest:
+    value: "#7A4306"
+    category: "color_group_8"
+
+  color_nb_magenta_vibrant:
+    value: "#FF1BA4"
+    category: "new_branding"
+  color_nb_magenta_vibrant_light:
+    value: "#F6BFE2"
+    category: "new_branding"
+  color_nb_deep_blue:
+    value: "#18132C"
+    category: "new_branding"
+  color_nb_medium_slate_blue:
+    value: "#6761E7"
+    category: "new_branding"
+  color_nb_peach:
+    value: "#FFE9DA"
+    category: "new_branding"
+  color_nb_cool_gray_dark:
+    value: "#8A8994"
+    category: "new_branding"
+  color_nb_cool_gray:
+    value: "#ADADAD"
+    category: "new_branding"
+  color_nb_cool_gray_light:
+    value: "#F8F8F8"
+    category: "new_branding"
+
+global:
+  type: color
+  category: color

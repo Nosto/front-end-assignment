@@ -1,0 +1,17 @@
+// WARNING these styles are imported without scoping in compatibility styles
+
+.label {
+  @include stack-space($space-xxx-small);
+  font-family: $font-family-primary-screen-smart;
+  font-size: $font-size-x-small;
+  line-height: $line-height-large;
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  color: $color-grey-darker;
+  @include tnums;
+
+  &[variation="inline"] {
+    display: inline-block;
+  }
+}

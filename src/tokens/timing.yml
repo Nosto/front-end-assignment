@@ -1,0 +1,19 @@
+#
+# TIMING TOKENS
+# Use these tokens for animation durations.
+#
+
+props:
+  duration_snappy:
+    value: "0.05s"
+  duration_quickly:
+    value: "0.1s"
+  duration_normal:
+    value: "0.25s"
+  duration_slowly:
+    value: "0.5s"
+  duration_blink:
+    value: "1s"
+global:
+  type: number
+  category: time

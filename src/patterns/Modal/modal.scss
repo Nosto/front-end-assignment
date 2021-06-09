@@ -1,0 +1,99 @@
+.root {
+  display: inline;
+  &.showToggle {
+    @include inline-space($space-xx-small);
+  }
+}
+
+.modal-wrapper {
+  position: fixed;
+  z-index: $z-index-modal;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+  transition: opacity $duration-slowly ease;
+}
+
+.modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color-black, 0.5);
+  display: table;
+}
+
+.modal-container-wrapper {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+  z-index: $z-index-modal + 1;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: #{$space-xx-large * 4};
+  max-height: 80vh;
+  margin: 0 auto;
+  @include inset-space($space-small);
+  text-align: left;
+  background-color: $color-white;
+  border-radius: $border-radius-default;
+  box-shadow: $box-shadow-modal;
+  transition: all $duration-slowly ease;
+  pointer-events: auto;
+}
+
+.modal-heading {
+  flex: 0 0 0;
+  @include stack-space($space-x-small);
+  padding-bottom: $space-x-small;
+  font-family: $font-family-primary;
+  font-size: $font-size-medium;
+  font-weight: 500;
+  font-style: normal;
+  line-height: $line-height-tiny;
+  text-transform: capitalize;
+  color: $color-ink;
+  border-bottom: 1px solid shade($color-grey-lighter, 3%);
+}
+
+.modal-content {
+  flex: 1 1 auto;
+  @include stack-space($space-x-small);
+  overflow: scroll;
+}
+
+.modal-footer {
+  flex: 0 0 0;
+  text-align: right;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

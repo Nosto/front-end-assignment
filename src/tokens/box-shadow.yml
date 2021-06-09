@@ -1,0 +1,49 @@
+#
+# BOX SHADOW TOKENS
+# Use these tokens to set a box-shadow.
+#
+
+props:
+  box_shadow_tiny:
+    value: "0 0 0 1px rgba(92,106,196, 0.1)"
+  box_shadow_tiny_inset:
+    value: "inset 0 0 0 1px rgba($color-black, 0.1)"
+  box_shadow_panel:
+    value: "0 4px 15px 0 rgba($color-ink, 0.025), 0 0 0 1px $color-grey-light"
+  box_shadow_input:
+    value: "inset 0 0 0 1px $color-grey"
+  box_shadow_input_no_border:
+    value: "inset 0 0 0 0 $color-grey"
+  box_shadow_input_no_border_active:
+    value: "inset 0 0 0 0 $color-blue-light"
+  box_shadow_codemirror_error:
+    value: "0 0 0 1px $color-red"
+  box_shadow_input_error:
+    value: "inset 0 0 0 1px $color-red"
+  box_shadow_input_color:
+    value: "inset 0 0 0 1px rgba($color-grey, 0.5)"
+  box_shadow_input_active:
+    value: "inset 0 0 0 1px $color-blue-light"
+  box_shadow_button:
+    value: "inset 0 -3px 0 rgba($color-black, 0.25)"
+  box_shadow_button_active:
+    value: "inset 0 -1px 0 rgba($color-black, 0.25)"
+  box_shadow_focus:
+    value: "0 0 0 3px rgba($color-blue-lighter, 0.33)"
+  box_shadow_modal:
+    value: "0 14px 28px rgba($color-black, 0.15), 0 10px 10px rgba($color-black, 0.12)"
+  box_shadow_toast:
+    value: "0 12px 12px -8px rgba($color-black, .1)"
+  box_shadow_nav_active:
+    value: "inset 3px 3px 3px rgba($color-black, 0.04)"
+  box_shadow_scroll_fade:
+    value: "-1px -1px 1px 1px $color-grey"
+  box_shadow_date_picker:
+    value: "inset 0 0 0 1px #bccad8"
+  box_shadow_compare_dates_hover:
+    value: "inset 0 0 0 1px $color-orange, 0 0 0 3px rgba(251, 156, 42, 0.33)"
+  box_shadow_loading_bar:
+    value: "0px 0px 3px 1px $color-grey-dark"
+global:
+  type: ...
+  category: box-shadow

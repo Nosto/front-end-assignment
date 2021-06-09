@@ -1,0 +1,52 @@
+[
+  {
+    "type": "new_rule",
+    "title": "new_category_merchandising_rule",
+    "time": 1614787862
+  },
+  {
+    "type": "new_rule",
+    "title": "new_category_merchandising_rule",
+    "time": 1614906662
+  },
+  {
+    "type": "update_campaign",
+    "title": "updated_recommendations_campaign_title",
+    "time": 1615909514
+  },
+  {
+    "type": "update_campaign",
+    "title": "updated_recommendations_campaign_title",
+    "time": 1616545874
+  },
+  {
+    "type": "new_campaign",
+    "title": "new_onsite_content_campaign",
+    "time": 1616549474
+  },
+  {
+    "type": "delete_rule",
+    "title": "remove_category_merchandising_rule",
+    "time": 1615749474
+  },
+  {
+    "type": "reindex",
+    "title": "reindex_products",
+    "time": 1616151454
+  },
+  {
+    "type": "update_products",
+    "title": "new_category_merchandising_rule",
+    "time": 1616455433
+  },
+  {
+    "type": "new_campaign",
+    "title": "new_category_merchandising_campaign",
+    "time": 1616858011
+  },
+  {
+    "type": "new_campaign",
+    "title": "new_category_merchandising_campaign",
+    "time": 1617158011
+  }
+]

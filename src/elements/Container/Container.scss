@@ -1,0 +1,12 @@
+.container {
+  @include inset-space($space-small);
+  margin: auto;
+  width: 100%;
+
+  &.horizontal {
+    padding: 0 $space-small;
+  }
+  &.vertical {
+    padding: $space-small 0;
+  }
+}

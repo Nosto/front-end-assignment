@@ -1,0 +1,19 @@
+{
+  "totalSales": {
+    "visits": 770135,
+    "sales": 3737596.12,
+    "orders": 16091,
+    "soldItems": 27241,
+    "soldItemsThroughNosto": 2245
+  },
+  "potentialSales": {
+    "carts": 53361,
+    "cartTotalValue": 11524208.65,
+    "cartsAbandoned": 37270
+  },
+  "sessionLifecycle": {
+    "totalPageViews": 2521357,
+    "totalProductViews": 1518657,
+    "averageSessionDuration": 259
+  }
+}

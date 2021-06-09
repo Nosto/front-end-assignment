@@ -1,0 +1,27 @@
+#
+# COLOR GROUP TOKENS
+# These tokens are used for building color generator mixin.
+#
+
+props:
+  greys:
+    value: "[$color_grey_lightest, $color_grey_lighter, $color_grey_light, $color_grey, $color_grey_dark, $color_grey_darker, $color_grey_darkest]"
+  magentas:
+    value: "[$color_magenta_lightest, $color_magenta_lighter, $color_magenta_light, $color_magenta, $color_magenta_dark, $color_magenta_darker, $color_magenta_darkest]"
+  violets:
+    value: "[$color_violet_lightest, $color_violet_lighter, $color_violet_light, $color_violet, $color_violet_dark, $color_violet_darker, $color_violet_darkest]"
+  blues:
+    value: "[$color_blue_lightest, $color_blue_lighter, $color_blue_light, $color_blue, $color_blue_dark, $color_blue_darker, $color_blue_darkest]"
+  teals:
+    value: "[$color_teal_lightest, $color_teal_lighter, $color_teal_light, $color_teal, $color_teal_dark, $color_teal_darker, $color_teal_darkest]"
+  greens:
+    value: "[$color_green_lightest, $color_green_lighter, $color_green_light, $color_green, $color_green_dark, $color_green_darker, $color_green_darkest]"
+  reds:
+    value: "[$color_red_lightest, $color_red_lighter, $color_red_light, $color_red, $color_red_dark, $color_red_darker, $color_red_darkest]"
+  oranges:
+    value: "[$color_orange_lightest, $color_orange_lighter, $color_orange_light, $color_orange, $color_orange_dark, $color_orange_darker, $color_orange_darkest]"
+  yellows:
+    value: "[$color_yellow_lightest, $color_yellow_lighter, $color_yellow_light, $color_yellow, $color_yellow_dark, $color_yellow_darker, $color_yellow_darkest]"
+global:
+  type: array
+  category: color-groups

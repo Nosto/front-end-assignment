@@ -1,0 +1,43 @@
+#
+# WIDTH TOKENS
+# Use these tokens to set width for elements.
+#
+
+props:
+  width_table_checkbox:
+    value: "64px"
+  width_nav_collapsed:
+    value: "70px"
+  width_marketing_cta:
+    value: "200px"
+  width_nav:
+    value: "255px"
+  width_table_primary:
+    value: "260px"
+  width_nav_collapsed_sub:
+    value: "325px"
+  width_nav_sub:
+    value: "510px"
+  width_nav_short_viewport:
+    value: "325px"
+  width_compatibility_breakpoint:
+    value: "1440px"
+  width_large_screen_breakpoint:
+    value: "1700px"
+  width_tooltip:
+    value: "500px"
+  width_datepicker_ranges:
+    value: "294px"
+  width_datepicker_narrow_breakpoint:
+    value: "1495px"
+  width_datepicker_range_overlay_narrow:
+    value: "610px"
+  width_datepicker_range_overlay:
+    value: "920px"
+  width_chart_tooltip:
+    value: "200px"
+  width_timepicker:
+    value: "100px"
+global:
+  type: number
+  category: width

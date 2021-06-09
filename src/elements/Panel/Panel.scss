@@ -1,0 +1,30 @@
+// WARNING these styles are imported without scoping in compatibility styles
+
+.panel {
+  font-family: $font-family-primary;
+  font-size: $font-size-small;
+  @include stack-space($space-x-small);
+  @include inset-space($space-x-small);
+  line-height: $line-height-base;
+  font-style: normal;
+  font-weight: 400;
+  color: $color-ink;
+  min-height: $space-large;
+  background-color: $color-white;
+  border-radius: $border-radius-default;
+  box-shadow: $box-shadow-panel;
+  &.small .panel-header {
+    margin-bottom: $space-xx-small;
+  }
+  &.default .panel-header {
+    margin-bottom: $space-x-small;
+    border-bottom: 1px solid shade($color-grey-lighter, 3%);
+  }
+  .panel-heading {
+    line-height: $line-height-tiny;
+  }
+  .panel-topright {
+    margin-top: -$space-xx-small;
+    padding: 0;
+  }
+}

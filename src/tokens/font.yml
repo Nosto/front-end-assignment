@@ -1,0 +1,31 @@
+#
+# FONT TOKENS
+# Use these tokens to set font-weight and font-family.
+#
+
+props:
+  font_family_marketing:
+    value: "'Archer A', 'Archer B', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  font_family_primary:
+    value: "'Gotham A', 'Gotham B', Helvetica, Arial, sans-serif"
+  font_family_primary_screen_smart:
+    value: "'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif"
+  font_family_secondary:
+    value: "'Archer A', 'Archer B', Helvetica, Arial, sans-serif"
+  font_weight_bold:
+    value: "700"
+  font_weight_semi_bold:
+    value: "600"
+  font_weight_medium:
+    value: "500"
+  font_weight_regular:
+    value: "400"
+  font_family_nb_primary:
+    value: "Aeonik, 'Helvetica Neue', Arial, sans-serif"
+    category: "new_branding"
+  font_family_nb_secondary:
+    value: "Apercu, 'Courier New', monospace"
+    category: "new_branding"
+global:
+  type: ...
+  category: font

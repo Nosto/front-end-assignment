@@ -1,0 +1,27 @@
+#
+# SIZING TOKENS
+# Use these tokens for the width and height properties.
+#
+
+props:
+  wizard_panel_max_width:
+    value: "950px"
+  wizard_panel_min_width:
+    value: "600px"
+  get_started_min_width:
+    value: "800px"
+  get_started_max_width:
+    value: "1400px"
+  tappable_square:
+    value: "44px"
+  get_started_icon:
+    value: "100px"
+  footerbar_height:
+    value: "70px"
+  thumbnail_width:
+    value: "50px"
+  product_preview_size:
+    value: "210px"
+global:
+  type: number
+  category: size

@@ -1,0 +1,112 @@
+&[variation*="plain"] {
+  background-color: transparent;
+  color: $color-blue-dark;
+  border: 1px solid transparent;
+  &:not([disabled]) {
+    &:hover {
+      background-color: $color-blue-tint;
+    }
+  }
+}
+
+&[variation*="danger"] {
+  color: $color-red-dark;
+  background-color: $color-white;
+  border: 1px solid $color-red-dark;
+  &:not([disabled]) {
+    &:hover {
+      background-color: $color-red-lightest;
+      color: currentColor;
+    }
+  }
+  &[variation*="link"] {
+    color: $color-red-dark;
+  }
+  &[variation*="link"]:not([disabled]):hover {
+    color: $color-red-darker;
+  }
+}
+
+&[variation*="primary"] {
+  background-color: $color-blue-dark;
+  border: 1px solid $color-blue-dark;
+  color: $color-white;
+  &:not([disabled]) {
+    &:hover {
+      background-color: $color-blue-darker;
+      border: 1px solid $color-blue-darker;
+    }
+  }
+  &[variation*="success"] {
+    background-color: $color-green-dark;
+    border: 1px solid $color-green-dark;
+    &:not([disabled]) {
+      &:hover {
+        background-color: $color-green-darker;
+      }
+    }
+  }
+  &[variation*="danger"] {
+    background-color: $color-red;
+    border: 1px solid $color-red;
+    &:not([disabled]) {
+      &:hover {
+        background-color: $color-red-dark;
+      }
+    }
+  }
+}
+
+&[variation*="secondary"] {
+  color: $color-grey-darkest;
+  background-color: $color-grey-light;
+  border: 1px solid $color-grey-light;
+  &:not([disabled]) {
+    &:hover {
+      color: $color-blue-dark;
+      background-color: $color-blue-lightest;
+      border: 1px solid $color-blue-lightest;
+    }
+  }
+}
+
+&[variation*="link"] {
+  color: $color-blue-dark;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  &:not([disabled]) {
+    &:hover {
+      background-color: transparent;
+      color: $color-blue;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+&[variation*="list"] {
+  font-weight: $font-weight-regular;
+  color: $color-ink;
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: 0;
+  outline: 0;
+  box-shadow: none;
+  margin: 0;
+  border: 0;
+  &:not([disabled]) {
+    &:hover {
+      background: $color-grey-lighter;
+    }
+    &:focus {
+      background: $color-blue-tint;
+      color: $color-blue-dark;
+    }
+  }
+}
+
+&[variation$="rounded-corners"] {
+  border-radius: $border-radius-default;
+}

@@ -1,0 +1,158 @@
+.button-group {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border: 1px solid $color-grey-light;
+  border-radius: $border-radius-default;
+
+  &[no-border] {
+    border: none;
+    /deep/ .choice-list > .item {
+      border-right: 0;
+    }
+  }
+
+  &[inline] {
+    display: inline-flex;
+  }
+
+  &[condensed] {
+    overflow: hidden;
+    /deep/ > .choice-list .item .item-title {
+      display: none;
+    }
+  }
+
+  &[invert],
+  &[condensed] {
+    /deep/ > .choice-list .item > .label {
+      font-weight: $font-weight-medium;
+      background: $color-grey-light;
+      &:hover {
+        background: lighten($color-grey-light, 3%);
+        color: $color-blue-dark;
+      }
+      &.checked {
+        color: $color-blue-dark;
+        background: $color-blue-lightest;
+      }
+    }
+  }
+
+  &[small] {
+    /deep/ > .choice-list > span > .label {
+      @include inset-squish-space($space-x-small - $space-xxx-small);
+    }
+  }
+
+  > * {
+    border: 0;
+    border-right: 1px solid $color-grey;
+    flex-grow: 1;
+    min-width: 0;
+    margin-right: 0;
+    border-radius: 0;
+    &.action-button,
+    &.action-button[size="small"] {
+      margin-right: 0;
+    }
+    &:first-child {
+      border-radius: $border-radius-default 0 0 $border-radius-default;
+    }
+    &:last-child {
+      border-right: 0;
+      border-radius: 0 $border-radius-default $border-radius-default 0;
+    }
+    /deep/ .action-button {
+      margin-right: 0;
+      border-radius: 0;
+      border: 0;
+      @include inset-squish-space($space-x-small - 1px);
+    }
+    /deep/ .action-button[variation*="more"] {
+      padding-right: $space-small + 1px;
+    }
+  }
+
+  /deep/ > .root.showToggle {
+    margin-right: 0;
+  }
+
+  /*
+   * Radio buttons
+   */
+
+  /deep/ > .has-tooltip,
+  /deep/ > .choice-list .item,
+  /deep/ > .label,
+  /deep/ > .choice-list .item > .label {
+    flex-grow: 1;
+    min-width: 0;
+    border-right: 1px solid $color-grey-light;
+    margin-bottom: 0;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  /deep/ .label {
+    @include inset-squish-space($space-x-small);
+    margin-bottom: 0;
+    position: relative;
+
+    &.checked {
+      background-color: $color-blue-lightest;
+    }
+
+    input[type="radio"]:before {
+      background-color: $color-white;
+      border: 1px solid $color-grey-light;
+    }
+
+    input[type="radio"]:checked:before {
+      background-color: $color-white;
+      border: 5px solid $color-blue-dark;
+    }
+
+    &:hover {
+      background: $color-blue-lightest;
+    }
+  }
+
+  &[no-buttons] {
+    /deep/ input[type="radio"] {
+      display: none;
+    }
+    /deep/ .label {
+      text-align: center;
+    }
+  }
+
+  /*
+   * Checkboxes
+   */
+  /deep/ .label {
+    &.checked {
+      background-color: $color-blue-lightest;
+    }
+
+    input[type="checkbox"]:before {
+      background-color: $color-white;
+      border: 1px solid $color-grey-light;
+    }
+
+    input[type="checkbox"]:checked:before {
+      background-color: $color-blue-dark;
+      border: none;
+    }
+  }
+
+  /*
+   * Choice list
+   */
+  /deep/ .choice-list {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}

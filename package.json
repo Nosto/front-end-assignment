@@ -1,0 +1,208 @@
+{
+  "name": "@nosto/design-system",
+  "version": "7.70.6",
+  "private": false,
+  "description": "Nosto Design System",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nosto/design-system.git"
+  },
+  "author": "Nosto <devops@nosto.com>",
+  "main": "dist/system/system.min.js",
+  "files": [
+    "dist/system"
+  ],
+  "scripts": {
+    "build": "npm-run-all theo node:build",
+    "build:system": "npm-run-all theo node:build:system",
+    "currentVersion": "node build/get-version.js",
+    "dev": "webpack-dev-server --inline --config ./build/webpack.dev.conf.js",
+    "lint": "eslint '**/*.{js,vue}' --cache",
+    "node:build": "node ./build/build.js",
+    "node:build:system": "node ./build/build-system.js",
+    "start": "npm-run-all --parallel currentVersion styleguide theo:onchange theo dev",
+    "styleguide": "vue-styleguidist server --config ./config/docs.config.js",
+    "styleguide:build": "vue-styleguidist build --config ./config/docs.config.js",
+    "theo": "theo ./src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest ./src/assets/tokens",
+    "theo:onchange": "onchange \"./src/tokens/*.yml\" -- npm run theo"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not Explorer > 0",
+    "not ExplorerMobile > 0",
+    "not BlackBerry > 0",
+    "not OperaMini all",
+    "not OperaMobile > 0"
+  ],
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+      },
+      "ecmaVersion": 8,
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/essential"
+    ],
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "no-console": "off",
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ],
+      "semi-style": [
+        "error",
+        "last"
+      ],
+      "vue/no-unused-vars": "error"
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/{elements,patterns,utils}/**/*.{js,vue}",
+      "!**/node_modules/**"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "@/(.*)": "<rootDir>/src/$1"
+    },
+    "setupFiles": [
+      "./test/jest-setup.js"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.vue$": "<rootDir>/node_modules/vue-jest",
+      "^.+\\.svg$": "jest-raw-loader",
+      "^.+\\.css$": "jest-raw-loader",
+      "^.+\\.scss$": "jest-raw-loader"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!vue-color).+\\.js$"
+    ]
+  },
+  "dependencies": {
+    "ajv": "^6.12.6",
+    "character-reference-invalid": "^1.1.3",
+    "codemirror": "5.38.0",
+    "d3": "^5.16.0",
+    "deep-equal": "^1.0.1",
+    "lodash": "^4.17.20",
+    "moment-locales-webpack-plugin": "^1.2.0",
+    "on-build-webpack": "^0.1.0",
+    "reduce-css-calc": "^2.1.1",
+    "vue": "^2.6.10",
+    "vue-docgen-cli": "^4.34.2",
+    "vue-lodash": "^2.1.2",
+    "vue-meta": "^1.5.0",
+    "vue-resource": "4.5.1",
+    "vuelidate": "^0.7.6",
+    "vuex": "^3.5.1",
+    "webpack-notifier": "^1.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/plugin-proposal-export-namespace-from": "^7.12.1",
+    "@babel/plugin-proposal-function-sent": "^7.12.1",
+    "@babel/plugin-proposal-json-strings": "^7.12.1",
+    "@babel/plugin-proposal-numeric-separator": "^7.12.5",
+    "@babel/plugin-proposal-throw-expressions": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "@babel/runtime-corejs3": "^7.12.5",
+    "@vue/test-utils": "^1.1.1",
+    "autoprefixer": "^8.5.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^24.7.1",
+    "babel-loader": "^8.2.1",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "chalk": "^2.4.1",
+    "compression-webpack-plugin": "^6.1.1",
+    "connect-history-api-fallback": "^1.3.0",
+    "copy-webpack-plugin": "^5.1.2",
+    "css-loader": "^3.6.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-compat": "^2.3.0",
+    "eslint-plugin-es5": "^1.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^4.5.0",
+    "file-loader": "^1.1.11",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "http-proxy-middleware": "^0.18.0",
+    "husky": "^0.14.3",
+    "jest": "^24.7.1",
+    "jest-raw-loader": "^1.0.1",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-notifier": "^5.2.1",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^4.0.0",
+    "optimist": "^0.6.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "ora": "^2.1.0",
+    "portfinder": "^1.0.28",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.1.5",
+    "postcss-url": "^7.3.2",
+    "prettier": "1.14.3",
+    "pretty-quick": "^1.6.0",
+    "rimraf": "^2.6.0",
+    "sass-loader": "^7.0.1",
+    "sass-resources-loader": "^1.3.3",
+    "semver": "^5.5.0",
+    "shelljs": "^0.8.4",
+    "style-loader": "^0.21.0",
+    "svg-url-loader": "^2.3.2",
+    "terser-webpack-plugin": "^1.4.5",
+    "theo": "^8.1.5",
+    "url-loader": "^1.0.1",
+    "vue-docgen-api": "^4.34.2",
+    "vue-jest": "^3.0.7",
+    "vue-lazyload": "^1.2.1",
+    "vue-loader": "^15.9.5",
+    "vue-style-loader": "^4.1.0",
+    "vue-styleguidist": "^4.36.1",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "4.26.0",
+    "webpack-bundle-analyzer": "^3.9.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.1.4",
+    "webpack-merge-and-include-globally": "^2.1.26"
+  },
+  "engines": {
+    "node": ">= 8.6.0",
+    "npm": ">= 3.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.nos.to"
+  },
+  "vetur": {
+    "tags": "./dist/system/vs-intellisense-tags.json",
+    "attributes": "./dist/system/vs-intellisense-attributes.json"
+  },
+  "web-types": "./dist/system/webtypes.json"
+}

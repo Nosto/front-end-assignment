@@ -1,0 +1,69 @@
+@mixin notificationColourSchemeGenerator($background, $text, $icon, $border) {
+  background: $background;
+
+  &.bordered {
+    border: 1px solid $border;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $text;
+  }
+
+  p {
+    color: $text;
+
+    /deep/ a {
+      font-weight: $font-weight-medium;
+      text-decoration: none;
+      color: $text;
+
+      &:hover {
+        text-decoration: underline;
+        background: transparent;
+      }
+    }
+  }
+
+  .svg-icon:not(.close-icon) /deep/ svg {
+    color: $icon;
+  }
+}
+
+@mixin notificationWarningColourScheme {
+  @include notificationColourSchemeGenerator(
+    $color-yellow-lightest,
+    $color-yellow-darkest,
+    $color-yellow-dark,
+    $color-yellow-light
+  );
+}
+
+@mixin notificationErrorColourScheme {
+  @include notificationColourSchemeGenerator($color-red-lightest, $color-red, $color-red, $color-red-light);
+}
+
+@mixin notificationPlainColourScheme {
+  @include notificationColourSchemeGenerator(
+    $color-grey-light,
+    $color-grey-darker,
+    $color-grey-dark,
+    $color-grey-light
+  );
+}
+
+@mixin notificationBlankColourScheme {
+  @include notificationColourSchemeGenerator($color-white, $color-ink, $color-blue, $color-grey-light);
+}
+
+@mixin notificationInfoColourScheme {
+  @include notificationColourSchemeGenerator(
+    $color-blue-lightest,
+    $color-blue-darker,
+    $color-blue-dark,
+    $color-blue-lightest
+  );
+}

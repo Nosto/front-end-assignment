@@ -1,0 +1,25 @@
+#
+# MEDIA QUERY TOKENS
+# Use these tokens to set media query width ranges.
+#
+
+props:
+  media_query_small:
+    value: "(max-width: 1279px)"
+  media_query_medium:
+    value: "(min-width: 1280px) and (max-width: 1699px)"
+  media_query_large:
+    value: "(min-width: 1700px)"
+  media_query_small_and_medium:
+    value: "(max-width: 1699px)"
+  media_query_medium_up:
+    value: "(min-width: 1280px)"
+  media_query_height_small:
+    value: "(max-height: 767px)"
+  media_query_height_medium_up:
+      value: "(min-height: 768px)"
+  media_query_large_up:
+      value: "(min-width: 1699px)"
+global:
+  type: ...
+  category: media-query

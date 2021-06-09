@@ -1,0 +1,15 @@
+@mixin disabled {
+  &[disabled],
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+@mixin inputFieldSmallMicro($size) {
+  @include inset-squish-space($size - 1);
+  @include inline-space($size);
+  font-family: $font-family-primary-screen-smart;
+  font-size: $font-size-x-small;
+  line-height: $line-height-smaller;
+}

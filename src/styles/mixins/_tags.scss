@@ -1,0 +1,54 @@
+@mixin tagStyles {
+  @include reset;
+  display: inline-block;
+  font-family: $font-family-primary-screen-smart;
+  color: $color-grey-darker;
+  background-color: $color-grey-lighter;
+  @include inline-space($space-xxx-small);
+  @include inset-squish-space($space-xx-small);
+  font-size: $font-size-x-small;
+  font-weight: 400;
+  font-style: normal;
+  line-height: $line-height-base;
+  max-width: 300px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: $border-radius-default;
+  transition: all $duration-quickly ease-in;
+  @include tnums;
+
+  @include colorGenerator("color", 5);
+  @include colorGenerator("background-color", 1);
+
+  &[opaque] {
+    color: white;
+    &[class*="orange"] {
+      @include colorGenerator("background-color", 4);
+    }
+    @include colorGenerator("background-color", 5);
+  }
+}
+
+@function colorList($list, $tone) {
+  @return nth($list, $tone);
+}
+
+@mixin colorGenerator($prop, $toneIndex) {
+  $colors: (
+    violet: $violets,
+    blue: $blues,
+    teal: $teals,
+    red: $reds,
+    green: $greens,
+    orange: $oranges,
+    yellow: $yellows
+  );
+
+  @each $name, $group in $colors {
+    #{"&"}.#{$name} {
+      #{$prop}: colorList($group, $toneIndex);
+    }
+  }
+}
