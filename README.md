@@ -18,7 +18,18 @@ Here you will find mock data and Design System for the assignment.
 
 You can find the minified version of the Nosto Design System "special edition" made for this assignment in `dist/system/`
 
-* Only necessary files are `system.min.css` and `system.min.js` which can be added as inline `<link rel="stylesheet">` and `<script>` blocks to the project's `index.html`.
+* Only necessary files are `system.min.css` and `system.min.js` which can be added as inline to project's `index.html`:
+
+```
+<head>
+    <link rel="stylesheet" href="<<your_path_to_system.min.css>>" />
+    ...
+</head>
+<body>
+    ...
+    <script src="<<your_path_to_system.min.js>>" />
+</body>
+```
 
 #### Injecting Design System to your Vue 2.x app
 
