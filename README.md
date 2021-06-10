@@ -1,18 +1,55 @@
-# Nosto Design System
+# Nosto Front-End developer assignment
+
+Here you will find mock data and Design System for the assignment.
+
+## Nosto Design System
 
 **Nosto Design System** is built on top of a tool called “Vue Design System” which is an open source tool for building UI Design Systems with [Vue.js](https://vuejs.org). It provides you and your team a set of organized tools, patterns & practices that work as the foundation for your application development.
 
-## Documentation
+### Design System Installation
 
-* **[Getting Started](https://github.com/viljamis/vue-design-system/wiki/getting-started): How to install and run Vue Design System.**
-* [Terminology](https://github.com/viljamis/vue-design-system/wiki/terminology): Introduction to the system concepts and its hierarchy.
-* [Naming of Things](https://github.com/viljamis/vue-design-system/wiki/naming-of-Things): Naming is hard, so it’s good to have clear guidelines.
-* [Directory Structure](https://github.com/viljamis/vue-design-system/wiki/directory-structure): What goes where and why.
-* [Working with the System](https://github.com/viljamis/vue-design-system/wiki/working-with-the-system): Concrete examples on how to work with `Tokens`, `Elements` , `Patterns` and `Templates`.
-* [Editing Living Documentation](https://github.com/viljamis/vue-design-system/wiki/editing-living-documentation): How to customize the living system documentation.
-* [Spacing](https://github.com/viljamis/vue-design-system/wiki/spacing): A framework for creating a predictable and harmonious spacing.
-* [Component Status](https://github.com/viljamis/vue-design-system/wiki/Component-Status): Clear labels that reflect the state of completion.
-* [Component QA](https://github.com/viljamis/vue-design-system/wiki/Component-QA): How to review new components and keep the quality high.
-* [Contributing](https://github.com/viljamis/vue-design-system/blob/master/CONTRIBUTING.md): A set of guidelines for contributing to the system.
-* [Code of Conduct](https://github.com/viljamis/vue-design-system/blob/master/CODE_OF_CONDUCT.md): By participating you agree to abide by its terms.
-* [Frequently Asked Questions](<https://github.com/viljamis/vue-design-system/wiki/frequently-asked-questions-(FAQ)>): How to use icons, how to use font-face, etc.
+* Clone repository to your local folder
+* Traverse to folder and run `npm install` to install the dependencies. In case you will encounter End of Life (EOL), termination of Long-term support (LTS), don't mind those -- the current main dependencies are updated but their subdependencies are often not up-to-date. 
+* Once the dependencies are installed, run `npm start` to start Design System locally. Then, open `http://localhost:6060` to access Design System UI.
+* In case of issues, you may check whether that has been solved in [Vue DS](https://github.com/viljamis/vue-design-system/) or [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist).
+* Recommended Node version is 12.x and anything towards the newer versions.
+
+### Design System usage
+
+You can find the minified version of the Nosto Design System "special edition" made for this assignment in `dist/system/`
+
+* Only necessary files are `system.min.css` and `system.min.js` which can be added as inline `<link rel="stylesheet">` and `<script>` blocks to the project's `index.html`.
+
+#### Injecting Design System to your Vue 2.x app
+
+In your `main.js` add:
+
+```
+import DesignSystem from "system"
+```
+
+and to use it globally
+
+```
+Vue.use(DesignSystem)
+```
+
+This enables now to use the components from the Design System:
+
+```
+<grid columns="1fr 1fr">
+    <panel heading="My nice title">
+        <action-button variation="plain" @click="clickHandler"/>
+    </panel>
+    <panel heading="My other title">
+        <action-button variation="primary" @click="clickHandler"/>
+    </panel>
+</grid>
+```
+### Mock data
+
+In the `mock-data` folder you will find the necessary mock data related to the assignment that has been given to you.
+
+* `site-metrics-kpis-feb-2021.json`and `site-metrics-kpis-march-2021.json` contains the data for KPI boxes. `averageSessionDuration` is time in seconds.
+* `visits-feb-2021.json` and `visits-march-2021.json` contains visit data for chart.
+* `account-activity-data.json` contains activity feed data.
