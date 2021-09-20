@@ -36,7 +36,7 @@ You can find the minified version of the Nosto Design System "special edition" m
 In your `main.js` add:
 
 ```
-import DesignSystem from "system"
+import DesignSystem from "<<your_path_to_Design_System_module>>" // this can be a direct Git repository reference or a local module reference
 ```
 
 and to use it globally
